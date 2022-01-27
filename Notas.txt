@@ -1,0 +1,157 @@
+[CLASE 2]
+
+	¿QUE ES EL NAVEGADOR?
+
+		Fx gracias a Hiper Text Transfer Protocol (HTTP) o (HTTPS version Secure)
+		este protocolo nos define como todos los datos van a ser transferidos entre si, o sea como viajan y como llegan a nosotros
+
+		google chrome dev es el navegador para desarrolladores, la versio canary se actualiza todas las noches, la cual es la mas mejor para todo, pero recomiendan el dev.
+
+		DevTools
+
+		existen tecnicas de debugueo (encontrar bugs) consisten en dejar pequeñas marcas en el codigo cdo lo estas escribiendo, para que el nav las pueda interpretar y se frene cuando llegue a esa parte
+
+[CLASE 4] EDITORES DE TEXTO
+
+	IDE - integrated developed enviroment
+
+	cdo escribimos codigo, en realidad estamos escribiendo texto
+
+	estos van revisando la sintaxis del codigo
+
+[CLASE 5] CONFI VSC
+
+	Extension de Prettier, nos ayuda a acomodar el codigo para que lo escribamos como corresponde y 
+	q sea legible
+
+	Color Hihglight nos ayuda a previsualizar en el codigo
+
+	Live Server, hace que el navegador se actualice solo cuando nosotros guardamos el codigo en el editor
+
+	Path Intellisense, sirve para vincular archivos, autocompletar las rutas de enlaces
+
+[CLASE 6]
+
+	Boiler Plate es el nombre que se le da al codigo que simplemente esta ahi, como si fuese una plantilla por defecto
+
+[CLASE 9] CONFIGURANDO UBUNTU - COMANDOS
+
+
+	Comandos:
+
+		pwd: nos manda la direccion en la que estamos trabajando
+		cd: es "change directory" cambiar la direccion
+		cd .. :es ir a la directorio anterior, retrocede un lvl
+		
+			cuando ya no nos dice en donde estamos y solo vemos una barrita "/" significa q estamos en el root, en el directorio raiz
+
+		ls: con este comando podemos ver el directorio completo en el q nos encontramos
+
+		¿Como hago para ir a una carpeta especial, para trabjar en una?
+
+		ejemplo, estamos en root, y tenemos la carpeta home y dentro de esta la carpeta bruno
+
+			bueno escribimos "/home/bruno"
+			asi es como nos traladamos, hacia adelante
+
+		cd /: este me manda derecho al root
+
+		cd mnt: me enviada al disco , lo q hace q pueda moverme en cualquier carpeta
+
+			en definciita, cuando ejecutamos el comando "cd " es para ir a donde queramos dentro del directorio,
+			solo debemos poner la ruta del directorio
+
+		cd ~ : me lleva MI directorio en Ubuntu ~ se hace con altGr + "+"
+
+	Lo ideal es que todos los proyectos que trabajemos de aca en adelante, este dentro del directorio de Ubuntu
+
+	"sudo" este sirve para tener permisos de administrador en los comandos
+
+	"mkdir" es para crear nuevas carpetas
+
+		lo ideal es "sudo mkdir"
+
+	"touch" es para crear archivos, siempre y cuando usemos la extension en el nombre edl archivo
+
+	mv: sirve para mover un archivo dentro de otro, primero se escribe el comando, despues el archivo que queremos 
+	mover y despues el archivo en donde vamos a ubiar los demas
+
+	"code ." es para abrir Visual Studio Code
+
+	"cat" y le pasamos el nombre del archivo
+		esta comando nos muestra el contenido dentro de un archivo
+
+	"man" y seguido algun otro comando...
+
+		este en si funciona como un manual de los comandos, nos muestra la funcionalidad del comando
+
+	"apt-get update" este por lo general va a pedir permisos de adm
+
+		estos sistemos operativos manejan algo que se llamado "gestor de paquetes" o "manejador de 
+		dependencias"
+		es para actualizar el repositorio de dependencias, en otras palabras estamos actualizando
+
+	"apt-get upgrade" y con este comando lo que hacemos es intalar esas actualizaciones que el sistema
+	nos ha mostrado
+
+	"apt install" es para instalar algo nuevo de forma especifica, despues del comando debemos agregar
+	el nombre de lo que queremos intalar
+
+	"apt install nodejs" de esta forma instalamos Node JS, que es un "run time enviroment"
+	es un ambiente de ejecucion para poder escribir comandos de js
+
+		sirve para hacer apps backend, para instalar ejecuciones de dependencias de proyectos
+
+		"node -v" nos muestra la version que tenemos instalada
+
+		"apt install npm" (npm : node packages management) es el manejador de paquetes de node
+
+		"whoami" sirve para saber el nombre de usuario que esta trabajando en Linux
+
+	"nmp" sirve para instalar paquetes de forma permanente (repositorios)
+	"npx" es para ejecutar paquetes desde internet sin necesidad de tenerlos instalados
+
+	"npx create-react-app test" "test" es el nombre que le vamos a dar a la carpeta
+
+		con esto vamos a usar librerias o frameworks, y que hacen ? ayudan a escribir codigo de forma
+		mas rapida y eficiente
+
+	https://maximilianofernandez.net/actualizar-node-js-en-ubuntu/   para actualizar NodeJS
+
+	"rm" seguido del nombre del archivo, es para borrar archivos
+
+		si queremos borar una carpeta vacia, tenemos q escribir -d en el medio, esto es para indicar
+		q es un direcctorio
+
+			rm -d nombreDeLaCarpeta
+
+		pero si la carpeta SI TIENE contenido, hay que usar una opcion de borrado recursivo "-rf",
+		pero no se puede borrar la carpeta si estamos dentro de ella
+
+			rm -rf nombreDeLaCarpeta
+
+[CLASE 14] GITHUB - GIT
+
+	Git es el gestor de versiones q estmaos usando por defacto
+
+	GitHub es una plataforma donde tdos van subiendo codigos, la gente colabora entre si,
+		GitLab tmb es para usar esto
+
+	como instalarlo ?... 
+
+		PRIMERO ANTES DE ISNTALAR LO QUE SEA, ES BUENA PRACTICA ACTULIZAR TODOS LOS PAQUETES DE UBUNTU	
+			sudo apt-get update
+			sudo apt-get upgrade
+
+		"sudo apt installar git" este comando es el que instala git
+
+	esta app, permite que cada persona que trabaje en un proyecto comun, lleve a cabo de forma indte
+	una rama del codigo madre, y al terminar se realiza algo que se llama MERCH, q es como una union
+	si algo se rompe al hacer esto, como esta todo publico pueden regresar y ver donde fallo
+
+	"ssh-keygen" esto es para crear un LLAVE ssh	
+
+		es un llave, un token, para poder pasarselo a github, y de esta forma autentificarnos en la 
+		plataforma
+
+		"shh-keygen -t rsa -b 4096 -C email" asi se crea una llave
