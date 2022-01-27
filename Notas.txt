@@ -155,3 +155,33 @@
 		plataforma
 
 		"shh-keygen -t rsa -b 4096 -C email" asi se crea una llave
+
+	 eval "$(ssh-agent -s)" : esto es para evaluar q existiera una agente corriendo
+
+	"ssh-copy-id email"
+		este comando copia nuestra llave publica y el mail se pasa, para indicar a q corre corresponde
+
+
+	CREAR UN NUEVO REPOSITORIO
+
+		usamos las lineas de codigo que nos va dando github
+
+		echo "# preWord" >> README.md : esto lo pegamos en la terminal dentro de la carpeta donde trabajamos
+
+		git init : inizializa un repositorio vacio
+
+		git add README.md (o podemos usar solor un punto "got add ." para agregar todos los archivos) agrega al repositorio los
+			archivos que seleccionamos 
+
+		git commit -m "first commit" : con esto es tener listo los archivos para mandarlos a repositorio
+
+		git branch -M main
+
+		git remote add origin https://github.com/brunoBalza/preWord.git : con este codigo lo mandamos a uno NO LOCAL, sino a otro
+			esto es para mandar a la parte colaborativa, simplemente para que otros lo puedan ver y aportar	
+
+		git push -u origin main
+			este es para enviar el repositorio a github
+
+		
+
